@@ -1,6 +1,5 @@
 # Withdraw Script
 
-## Introduction
 This script allows users to withdraw an amount from their balance, checking for sufficient funds before processing the transaction.
 
 ## Functionality
