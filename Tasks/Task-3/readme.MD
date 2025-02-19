@@ -1,4 +1,4 @@
-#  Filter Students 
+#  Filter Students Script
 
 This script filters a list of students and prints the names that start with the letters 'A' or 'D'.
 
