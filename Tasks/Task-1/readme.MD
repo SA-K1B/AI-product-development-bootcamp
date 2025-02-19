@@ -12,7 +12,11 @@ The function returns:
 - A message "Insufficient funds" if the withdrawal amount exceeds the balance
 
 ## Usage
-To run the script, execute it in a Python environment. You will be prompted to enter your current balance and the amount you wish to withdraw.
+To run the script, execute the following command in your terminal:
+
+```bash
+python withdraw.py
+```
 
 ## Example
 ```

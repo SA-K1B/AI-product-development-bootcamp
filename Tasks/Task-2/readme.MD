@@ -13,7 +13,11 @@ The function returns:
 - An error message for division by zero or invalid operators
 
 ## Usage
-To run the script, execute it in a Python environment. You will be prompted to enter two numbers and the operator.
+To run the script, execute the following command in your terminal:
+
+```bash
+python calculator.py
+```
 
 ## Example
 ```
