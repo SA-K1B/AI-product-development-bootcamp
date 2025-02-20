@@ -21,9 +21,22 @@
 - **Email**: Contact email of the instructor
 - **Office_Room**: Office location of the instructor
 
+## Primary Keys (PK)
+- Students: Student_ID
+- Courses: Course_ID
+- Instructors: Instructor_ID
+
+## Foreign Keys (FK)
+- Enrollments:
+  - Student_ID (FK referencing Students)
+  - Course_ID (FK referencing Courses)
+- Courses:
+  - Instructor_ID (FK referencing Instructors)
+
 ## Relationships
 
 ### Students and Courses
+
 - **Relationship Type**: Many-to-Many
 - **Description**: Each student can enroll in multiple courses, and each course can have multiple students.
 
