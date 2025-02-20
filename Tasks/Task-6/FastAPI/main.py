@@ -35,3 +35,13 @@ def register(user: schemas.UserCreate, db: Session = Depends(get_db)):
     db.refresh(new_user)
     
     return new_user
+@app.post("/login/", response_model=schemas.TokenResponse)
+def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
+    print("test")
+    user = db.query(models.User).filter(models.User.username == form_data.username).first()
+    print (user.username)
+    if not user or not auth.verify_password(form_data.password, user.password):
+        raise HTTPException(status_code=401, detail="Invalid credentials")
+
+    access_token = auth.create_jwt_token({"sub": user.username})
+    return {"access_token": access_token, "token_type": "bearer"}
